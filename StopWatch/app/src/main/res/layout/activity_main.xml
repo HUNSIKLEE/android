@@ -77,7 +77,6 @@
             android:id="@+id/lapLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:foregroundGravity="center_vertical"
             android:orientation="vertical" />
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

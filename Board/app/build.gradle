@@ -5,7 +5,6 @@ plugins {
     id 'kotlin-kapt'
 }
 
-
 android {
     namespace 'com.example.board'
     compileSdk 33

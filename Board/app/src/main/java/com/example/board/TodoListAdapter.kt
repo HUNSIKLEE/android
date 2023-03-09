@@ -1,4 +1,4 @@
-package com.example.narin.view
+package com.example.board
 
 
 import android.util.Log
@@ -8,8 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.board.R
-import com.example.narin.model.TodoModel
+import com.example.board.model.TodoModel
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -32,7 +31,7 @@ class TodoListAdapter(val deletetItemClick: (TodoModel) -> Unit) :
     * item_list 레이아웃을 사용하여 뷰를 생성하고 뷰홀더에 뷰를 전달하여 생성된 뷰홀더를 반환
     * */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.activity_main, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list, parent, false)
         val viewHolder = TodoViewHolder(view)
         return viewHolder
     }

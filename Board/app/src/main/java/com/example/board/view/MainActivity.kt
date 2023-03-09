@@ -1,4 +1,5 @@
-package com.example.narin.view
+package com.example.board.view
+
 import android.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,8 +10,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.board.R
-import com.example.narin.model.TodoModel
-import com.example.narin.viewmodel.TodoViewModel
+import com.example.board.TodoListAdapter
+import com.example.board.model.TodoModel
 import java.util.*
 import kotlin.collections.ArrayList
 

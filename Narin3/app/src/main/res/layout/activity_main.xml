@@ -25,7 +25,7 @@
         android:id="@+id/btn_delete"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="336dp"
+        android:layout_marginStart="320dp"
         android:layout_marginBottom="4dp"
         android:background="#6799FF"
         android:text="삭제"
@@ -39,26 +39,32 @@
         android:id="@+id/tv_title"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:background="#FFE08C"
+        android:background="#D687FF"
         android:elevation="10dp"
         android:gravity="center"
-        android:text="My ToDo App"
+        android:text="Pos"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/recyclerview_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_list"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="412dp"
+        android:layout_height="425dp"
         android:paddingTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title"
         tools:listitem="@layout/item_list" />
 
@@ -74,5 +80,44 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_add2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
+        android:background="#6799FF"
+        android:text="좌석찾기"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_add3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="320dp"
+        android:layout_marginBottom="72dp"
+        android:background="#6799FF"
+        android:text="NEXT"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="227dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="16dp"
+        android:hint="좌석을 입력해주세요."
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_update"
+        app:layout_constraintEnd_toStartOf="@+id/btn_add3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_add2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

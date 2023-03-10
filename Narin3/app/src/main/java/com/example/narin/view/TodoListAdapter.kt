@@ -1,5 +1,3 @@
-package com.example.narin.view
-
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -32,8 +30,7 @@ class TodoListAdapter(val deletetItemClick: (TodoModel) -> Unit) :
     * item_list 레이아웃을 사용하여 뷰를 생성하고 뷰홀더에 뷰를 전달하여 생성된 뷰홀더를 반환
     * */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.activity_main, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list, parent, false)
         val viewHolder = TodoViewHolder(view)
         return viewHolder
     }
@@ -70,18 +67,15 @@ class TodoListAdapter(val deletetItemClick: (TodoModel) -> Unit) :
 
         fun bind(todoModel: TodoModel) {
 
-            try {
-                tv_seq.text = todoModel.seq.toString()
-                tv_title.text = todoModel.title
-                tv_content.text = todoModel.content
-                tv_date.text = todoModel.createDate.convertDateToString("yyyy.MM.dd HH:mm")
+            tv_seq.text = todoModel.seq.toString()
+            tv_title.text = todoModel.title
+            tv_content.text = todoModel.content
+            tv_date.text = todoModel.createDate.convertDateToString("yyyy.MM.dd HH:mm")
 
-                iv_delete.setOnClickListener {
-                    deletetItemClick(todoModel)
-                }
-            } catch (E: java.lang.Exception) {
-                Log.e("bind", "Error binding todo model : $todoModel", E)
+            iv_delete.setOnClickListener {
+                deletetItemClick(todoModel)
             }
+
         }
 
     }

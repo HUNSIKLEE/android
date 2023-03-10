@@ -1,4 +1,5 @@
 package com.example.narin.view
+import TodoListAdapter
 import android.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -116,7 +117,7 @@ class MainActivity : AppCompatActivity() {
             dialogView.findViewById<EditText>(R.id.et_add_content)
         }
         var builder = AlertDialog.Builder(this)
-        val dialog = builder.setTitle("Todo 아이템 추가하기").setView(dialogView)
+        val dialog = builder.setTitle("추가하기").setView(dialogView)
             .setPositiveButton(
                 "확인"
             ) { dialogInterface, i ->

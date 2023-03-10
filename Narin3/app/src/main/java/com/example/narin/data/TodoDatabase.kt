@@ -9,20 +9,20 @@ import com.example.narin.model.TodoModel
 
 /*
 * @Database 의 entites = : entity 정의
-* @Database 의 version = : SQLite 버전 지정
-* */
-@Database(entities = [TodoModel::class], version = 1)
-abstract class TodoDatabase : RoomDatabase() {
+            * @Database 의 version = : SQLite 버전 지정
+            * */
+            @Database(entities = [TodoModel::class], version = 1)
+            abstract class TodoDatabase : RoomDatabase() {
 
-    abstract fun todoDao(): TodoDao
+                abstract fun todoDao(): TodoDao
 
-    //데이터베이스 인스턴스를 싱글톤으로 사용하기 위해 companion object 안에 만들어준다
-    companion object {
+                //데이터베이스 인스턴스를 싱글톤으로 사용하기 위해 companion object 안에 만들어준다
+                companion object {
 
-        private var INSTANCE: TodoDatabase? = null
+                    private var INSTANCE: TodoDatabase? = null
 
-        //getInstance() :  여러 스레드가 접근하지 못하도록 synchronized로 설정
-        fun getInstance(context: Context): TodoDatabase? {
+                    //getInstance() :  여러 스레드가 접근하지 못하도록 synchronized로 설정
+                    fun getInstance(context: Context): TodoDatabase? {
 
             if (INSTANCE == null) {
                 synchronized(TodoDatabase::class) {
